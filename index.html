@@ -5,45 +5,24 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
        <link rel="stylesheet" href="survey.css">
        <title>Simple Survey Page</title>
-       <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </head>
   <body>
-  <header>
-  <h1 id="title">Surviving the Lockdown as a Musician</h1>
-  <p id="description">To identify, analyze and proffer solutions to the challenges posed by the Lockdown.</p>
-  </header>
-  <body>
-  <form id="survey-form">
-     <div class="form">
-          <label id="name-label" for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name" 
-            placeholder="Enter your name"
-            required/>
-        </div>
+     
+        <header class="header">
+           <h1 id="title">Surviving the Lockdown as a Musician</h1>
+           <p id="description">To identify, analyze and proffer solutions to the challenges posed by the Lockdown.</p>
+           <h3> Kindly fill out the following form appropiately</h3>
+        </header>
+        
+
+  <div class="container"> 
+       
+        <form id="survey-form" class="form">
         <div class="form">
-          <label id="email-label" for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your Email"
-            required/>
-        </div>
-        <div class="form">
-          <label id="number-label" for="number">Age</label>
-          <input
-            type="number"
-            name="age"
-            id="number"
-            min="10"
-            max="60"
-            placeholder="What's your age?"
-            required/>
-        </div>
-        <div class="form">
+          <input  type="text" name="Name" placeholder="Your Full name" required ><br>
+          <input  type="email" name="email" placeholder="Your email" required><br>
+          <input  type="number" min="18" max="70" name="age" placeholder="Your age" required><br>
+
           <p>Are you a solo performer or you perform with a band?</p>
              <select id="dropdown">
                   <option disabled selected value="Performer">Band or Solo?</option>
@@ -51,30 +30,60 @@
                   <option value="Band">Band performer</option>
                   <option value="other">Other</option>
              </select>
+          <p>Do you think the Government is doing anything to help?</p>
+
+          <div class="group">
+               <label class="radio">Yes
+               <input type="radio" checked="checked" name="radio">
+               <span class="checkmark"></span>
+             </label>
+             <label class="radio">No
+               <input type="radio" name="radio">
+               <span class="checkmark"></span>
+             </label>
+             <label class="radio">Maybe
+               <input type="radio" name="radio">
+               <span class="checkmark"></span>
+             </label>
+          </div>
+          
+          
+
+             <p>What do you need the most right now?<span>(Check all that apply)</span></p>
+
+            <div class="group">
+                 <label class="checkbox">Just give me Food
+               <input type="checkbox" checked="checked"> <span class="checkmark"></span>
+             </label>
+             
+             <label class="checkbox">Visa
+               <input type="checkbox"> <span class="checkmark"></span>
+             </label>
+             
+             <label class="checkbox">Money answers all
+               <input type="checkbox"><span class="checkmark"></span>
+             </label>
+             
+             <label class="checkbox">A job
+               <input type="checkbox"><span class="checkmark"></span>
+             </label>
+             
+             <label class="checkbox">Endsars
+               <input type="checkbox"> <span class="checkmark"></span>
+             </label>
+             
+             <label class="checkbox">I'm okay the way I am
+               <input type="checkbox"> <span class="checkmark"></span>
+             </label>
+            </div> 
+             
         </div>
-        <div class="form">
-             <p>Do you think the Government is doing anything to help?</p>
-             <label><input name="govt" type="radio" value="Yes" class="input-radio" >Yes</label>
-             <label><input name="govt" type="radio" value="No"  class="input-radio">Government Ke?</label>
-             <label><input name="govt" type="radio" value="Maybe" class="input-radio">Let's just thank God for life</label>
-        </div>
-        <div class="form">
-             <p>Wh6at do you need the most right now?<span>(Check all that apply)</span></p>
-             <label><input name="need" type="checkbox" value="money" class="input-checkbox">Money</label>
-             <label><input name="need" type="checkbox" value="food" class="input-checkbox">Food</label>
-             <label><input name="need" type="checkbox" value="Visa" class="input-checkbox">Visa </label>
-             <label><input name="need" type="checkbox" value="Good" class="input-checkbox">Nah, I'm good.</label>
-             <label><input name="need" type="checkbox" value="peace" class="input-checkbox">Peace of mind</label>
-             <label><input name="need" type="checkbox" value="EndSars" class="input-checkbox">EndSars</label>
-             <label><input name="need" type="checkbox" value="Job" class="input-checkbox">A Job</label>
-        </div>
-        <div class="form">
+        
         <p class="form">How has the pandemic affected your source of income as a musician?</p>
         <textarea placeholder="Enter your comments here"></textarea>
-        </div>
-        <div class="form">
-             <button type="button" id="submit" class="button">Submit</button>
-        </div>
+        <button type="button" id="submit" class="button">Submit</button>
+        
   </form>
+  </div>
   </body>
   </html>
